@@ -1,5 +1,5 @@
-# GitHub Actions 监控组 A：入住 9/5 → 离店 9/12，仅个人，全区
-# 不含密钥；Bark key 由 Actions Secret（BARK_URL）注入。
+# GitHub Actions 监控 A：入住 9/14，离店 9/20，仅个人，全区
+# Bark key 不写这里，由 GitHub Actions Secret 注入
 
 base_url: "https://qnyz.shyouth.net/qnyzApi"
 verify_ssl: false
@@ -10,15 +10,25 @@ filters:
   name: ""
   user_type: 2
   apply_scope: "personal"
-  districts: []
-  only_stations: ["友间公寓宁国路社区青年驿站"]
-  date_from: "2026-09-11"
-  date_to: "2026-09-14"
+
+  districts:
+    - "徐汇区"
+    - "静安区"
+    - "普陀区"
+    - "长宁区"
+    - "虹口区"
+    - "杨浦区"
+
+  only_stations: []
+
+  date_from: "2026-09-14"
+  date_to: "2026-09-20"
+
   min_house_count: 0
   min_apply_number: 1
 
 notify:
   type: "bark"
-  url: ""          # 由环境变量 QNYZ_NOTIFY_URL 注入
+  url: ""
 
 log_file: ""
