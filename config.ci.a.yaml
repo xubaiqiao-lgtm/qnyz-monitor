@@ -29,6 +29,6 @@ filters:
 
 notify:
   type: "bark"
-  url: ""
+  url: "https://api.day.app/yk3tPTFEGCAd4UUyii34Wh/青年驿站有房啦"
 
 log_file: ""
